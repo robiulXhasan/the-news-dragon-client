@@ -1,0 +1,8 @@
+::placeholder {
+    color: rgb(100, 98, 98) !important;
+    opacity: 50% !important;
+}
+
+label {
+    font-weight: 500 !important;
+}
