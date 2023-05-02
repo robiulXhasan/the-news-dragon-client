@@ -10,7 +10,7 @@ const LeftNav = () => {
       .catch((error) => console.error(error.message));
   }, []);
   return (
-    <div>
+    <div className="sticky-top">
       <h4 className="fw-bold mt-5">All Category</h4>
       <div className="ps-4">
         {categories.map((category) => (

@@ -11,7 +11,7 @@ const Main = () => {
     <div>
       <Header></Header>
       <Container>
-        <Row>
+        <Row >
           <Col lg={3}>
             <LeftNav></LeftNav>
           </Col>

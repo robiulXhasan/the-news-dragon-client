@@ -5,7 +5,7 @@ import QZone from "../QZone/QZone";
 
 const RightNav = () => {
   return (
-    <div>
+    <div className="sticky-top">
       <div>
         <h4 className="fw-bold mt-5">Login With</h4>
         <Button className="mb-3 w-100" variant="outline-primary">
