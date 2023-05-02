@@ -3,13 +3,14 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { BsBookmark, BsShare } from "react-icons/bs";
 import { FaEye, FaRegStar, FaStar } from "react-icons/fa";
-import Rating from "react-rating";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   const { _id, title, image_url, author, details, total_view, rating } = news;
   return (
-    <Card className=" ">
+    <Card className=" mb-3">
       <Card.Header className="d-flex  align-items-center">
         <Card.Img
           style={{ height: "50px", width: "auto" }}
@@ -45,14 +46,8 @@ const NewsCard = ({ news }) => {
         </Card.Text>
       </Card.Body>
       <Card.Footer className="text-muted d-flex align-items-center">
-        <div className="flex-grow-1 align-items-center">
-          <Rating
-            placeholderRating={rating.number}
-            readonly
-            emptySymbol={<FaRegStar></FaRegStar>}
-            placeholderSymbol={<FaStar className="text-warning"></FaStar>}
-            fullSymbol={<FaStar></FaStar>}
-          />
+        <div className="d-flex flex-grow-1 align-items-center">
+          <Rating style={{ maxWidth: 100 }} value={rating?.number} readOnly />
           <span className="ms-2">{rating?.number}</span>
         </div>
         <div>
